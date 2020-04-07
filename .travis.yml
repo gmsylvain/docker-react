@@ -7,6 +7,6 @@ before_install:
 
 
 script:
-  - docker run  -t travis-dev-build npm run test -- --coverage
+  - docker run -e CI=true travis-dev-build run test
 
 
