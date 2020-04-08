@@ -10,3 +10,14 @@ script:
   - docker run -e CI=true travis-dev-build npm run test
 
 
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-1"
+  app: "DockerReact"
+  env: "Dockerreact-env"
+  bucket_name: "elasticbeanstalk-us-east-1-263267561053"
+  bucket_path: "DockerReact"
+  on:
+    branch: master
+
+ 
